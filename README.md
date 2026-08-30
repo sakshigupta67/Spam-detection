@@ -35,24 +35,7 @@ This follows the required assignment split exactly.
 ## Why Multinomial Naive Bayes is Appropriate
 The input data contains non-negative integer word counts, which is a natural fit for Multinomial Naive Bayes. Each email is represented as a vector of counts, and the model assumes each feature contributes independently given the class.
 
-## Naive Bayes Formula
-The classifier estimates a class score for each email using:
 
-log P(c) + sum(feature_count_j * log P(word_j | c))
-
-where:
-- P(c) is the class prior probability
-- P(word_j | c) is the likelihood of feature j given class c
-
-## Class Prior Calculation
-For each class c:
-
-P(c) = count(class c) / total number of training emails
-
-## Word Likelihood Calculation
-For each class c and feature j:
-
-P(word_j | c) = (count(word_j, c) + alpha) / (total word counts in class c + alpha * vocabulary_size)
 
 ## Laplace Smoothing
 Laplace smoothing is applied to avoid zero probabilities when a word never appears in a class. In this implementation, alpha = 1.0 by default.
