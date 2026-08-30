@@ -1,0 +1,27 @@
+Dataset Information
+-------------------
+Total emails: 5172
+Number of features: 3000
+Training samples: 4500
+Testing samples: 672
+Number of spam training emails: 1286
+Number of non-spam training emails: 3214
+
+Model Information
+-----------------
+Algorithm: Multinomial Naive Bayes
+Smoothing: Laplace smoothing
+Alpha: 1.0
+Probability calculation: Log probabilities
+
+Evaluation Results
+------------------
+Confusion Matrix:
+              Predicted
+              0       1
+Actual 0      432      26
+Actual 1      11      203
+Accuracy:  0.944940
+Precision: 0.886463
+Recall:    0.948598
+F1 Score:  0.916479
